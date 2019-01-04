@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<RunSettings>
+	<RunConfiguration>
+    <!--- MaxCpuCount>4</MaxCpuCount-->
+		<ResultsDirectory>.\TestResults</ResultsDirectory>
+	 </RunConfiguration>
+<!-- MSTest adapter -->
+  <MSTest>
+    <MapInconclusiveToFailed>True</MapInconclusiveToFailed>
+    <CaptureTraceOutput>false</CaptureTraceOutput>
+    <DeleteDeploymentDirectoryAfterTestRunIsComplete>False</DeleteDeploymentDirectoryAfterTestRunIsComplete>
+    <DeploymentEnabled>True</DeploymentEnabled>
+    <ForcedLegacyMode>false</ForcedLegacyMode>
+  </MSTest>
+</RunSettings>

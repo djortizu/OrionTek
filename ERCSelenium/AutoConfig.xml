@@ -1,0 +1,10 @@
+﻿<configuration>
+  <appSettings>
+    <TestEnvironment>UAT</TestEnvironment>
+  </appSettings>
+  <UAT>
+    <AppUrl>http://www.google.com</AppUrl>
+    <AppUser>lll</AppUser>
+    <AppPwd></AppPwd>
+  </UAT>
+</configuration>
