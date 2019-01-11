@@ -33,5 +33,16 @@ namespace ERCSelenium
 
             });
         }
+
+        [TestMethod]
+        public void TestingVTest()
+        {
+            RunTest(() =>
+            {
+                Reporter.TestDescription = "Testing Build Pipeline.";
+                Reporter.TestStep = "Report Test Environment from Run Settings file.";
+                Reporter.StatusUpdate(AutoConfig.TestEnvironment, true);
+            });
+        }
     }
 }

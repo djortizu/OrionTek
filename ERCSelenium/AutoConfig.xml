@@ -7,4 +7,19 @@
     <AppUser>lll</AppUser>
     <AppPwd></AppPwd>
   </UAT>
+  <DEV>
+    <AppUrl>http://www.google.com</AppUrl>
+    <AppUser>lll</AppUser>
+    <AppPwd></AppPwd>
+  </DEV>
+  <QA>
+    <AppUrl>http://www.google.com</AppUrl>
+    <AppUser>lll</AppUser>
+    <AppPwd></AppPwd>
+  </QA>
+  <PROD>
+    <AppUrl>http://www.google.com</AppUrl>
+    <AppUser>lll</AppUser>
+    <AppPwd></AppPwd>
+  </PROD>
 </configuration>

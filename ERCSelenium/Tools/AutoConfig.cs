@@ -17,13 +17,16 @@ namespace ERCSelenium.Tools
 
         private static string appUrl;
 
+        private static bool isUsingRunSettings;
+
         public static void Initialize(TestContext context)
         {
+            isUsingRunSettings = context.Properties["TestEnvironment"] != null;
             xmlFilePath = $@"{context.DeploymentDirectory}\AutoConfig.xml";
             if (!File.Exists(xmlFilePath))
                 throw new FileNotFoundException("AutoConfig file was not found. Please verify that file is listed as deployment item in MasterTestClass and is setup as 'Copy Always' in Properties.");
 
-            testEnvironment = ReadXMLAppSettings("appSettings", "TestEnvironment");
+            testEnvironment = isUsingRunSettings ? context.Properties["TestEnvironment"].ToString() : ReadXMLAppSettings("appSettings", "TestEnvironment");
 
             appUrl = ReadEnvironmentSettings("AppUrl");
         }
