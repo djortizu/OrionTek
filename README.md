@@ -8,7 +8,7 @@ Elaborar/automatizar por lo menos un escenario y dos casos de prueba.
 Utilizar un controlador de versiones y mantener el proyecto público (preferiblemente github).
 Documentar apropiadamente en el readme del proyecto las informaciones que considere vitales para este y su ejecución.
 
-#Archivos agregados
+# Archivos agregados
 
 El patron de diseño que utilice es el Page Object Model.
 
