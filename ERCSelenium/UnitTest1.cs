@@ -1,9 +1,8 @@
-﻿using System;
-using static Selenio.Core.SUT.SUTDriver;
-using ERCSelenium.SUT;
+﻿using ERCSelenium.SUT;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.IO;
 using ERCSelenium.Tools;
+using System.Collections.Generic;
+using Selenio.HtmlReporter;
 
 namespace ERCSelenium
 {
@@ -15,7 +14,7 @@ namespace ERCSelenium
         {
             RunTest(() =>
             {
-                Reporter.TestDescription = "Navigate to Google and make a search.";
+                App.Reporter.TestDescription = "Navigate to Google and make a search.";
                 App.OpenURL();
                 App.Google.Search("Youtube");
             });
@@ -26,8 +25,8 @@ namespace ERCSelenium
         {
             RunTest(() =>
             {
-                Reporter.TestDescription = "Read my XML.";
-                Reporter.TestStep = "Get deployment directory";
+                App.Reporter.TestDescription = "Read my XML.";
+                App.Reporter.TestStep = "Get deployment directory";
                 Assertions.AreEqual(AutoConfig.XmlFilePath, AutoConfig.XmlFilePath, "File paths are not the same.");
                 Assertions.AreEqual("", AutoConfig.XmlFilePath, "File paths are not the same.");
 
@@ -39,9 +38,9 @@ namespace ERCSelenium
         {
             RunTest(() =>
             {
-                Reporter.TestDescription = "Testing Build Pipeline.";
-                Reporter.TestStep = "Report Test Environment from Run Settings file.";
-                Reporter.StatusUpdate(AutoConfig.TestEnvironment, true);
+                App.Reporter.TestDescription = "Testing Build Pipeline.";
+                App.Reporter.TestStep = "Report Test Environment from Run Settings file.";
+                App.Reporter.StatusUpdate(AutoConfig.TestEnvironment, true);
             });
         }
     }

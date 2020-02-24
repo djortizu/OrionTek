@@ -17,6 +17,8 @@ namespace ERCSelenium.Tools
 
         private static string appUrl;
 
+        private static string amazonUrl;
+
         private static bool isUsingRunSettings;
 
         public static void Initialize(TestContext context)
@@ -29,6 +31,7 @@ namespace ERCSelenium.Tools
             testEnvironment = isUsingRunSettings ? context.Properties["TestEnvironment"].ToString() : ReadXMLAppSettings("appSettings", "TestEnvironment");
 
             appUrl = ReadEnvironmentSettings("AppUrl");
+            amazonUrl = ReadEnvironmentSettings("AmazonUrl");
         }
 
         protected static string ReadEnvironmentSettings(string nodes, bool required = true)
@@ -69,6 +72,8 @@ namespace ERCSelenium.Tools
         public static string TestEnvironment => testEnvironment;
 
         public static string AppUrl => appUrl;
+
+        public static string AmazonUrl => amazonUrl;
 
 
 

@@ -1,4 +1,5 @@
-﻿using ERCSelenium.PageObjects;
+﻿using ERC.Selenium.PageObjects;
+using ERCSelenium.PageObjects;
 using ERCSelenium.Reporting;
 using ERCSelenium.Tools;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -22,6 +23,9 @@ namespace ERCSelenium.SUT
             Driver.Url = AutoConfig.AppUrl;
             return Google;
         }
+
         public static Google Google => GetPage<Google>();
+
+        public static Amazon Amazon => GetPage<Amazon>();
     }
 }

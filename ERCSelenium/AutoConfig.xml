@@ -6,6 +6,9 @@
     <AppUrl>http://www.google.com</AppUrl>
     <AppUser>lll</AppUser>
     <AppPwd></AppPwd>
+    <AmazonUrl>https://www.amazon.com/</AmazonUrl>
+    <AmazonUser></AmazonUser>
+    <AmazonPwd></AmazonPwd>
   </UAT>
   <DEV>
     <AppUrl>http://www.google.com</AppUrl>
