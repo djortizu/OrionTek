@@ -10,16 +10,16 @@ namespace ERCSelenium.Tools
 {
     public class Assertions
     {
-        public static void AreEqual(string a, string b, string message)
+        public static void AreEqual<T>(T expected, T actual, string message)
         {
             try
             {
-                Assert.AreEqual(a, b, message);
-                App.Reporter.ReportAssertion("element", "AreEqual", a, b, true, string.Empty);
+                Assert.AreEqual<T>(expected, actual, message);
+                App.Reporter.ReportAssertion<T>("element", "AreEqual", expected, actual, true, message);
             }
             catch (Exception ex)
             {
-                App.Reporter.ReportAssertion("element", "AreEqual", a, b, false, ex.Message);
+                App.Reporter.ReportAssertion<T>("element", "AreEqual", expected, actual, false, ex.Message);
                 throw;
             }
         }
